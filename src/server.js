@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
 const databaseStart = require('./config/databaseConfig')
+const methodOverride = require('method-override')
+
+//Import Routes
+const listItemRoute = require('./routes/listItem')
 
 dotenv.config()
 
@@ -25,8 +29,19 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(methodOverride('_method'))
+
+
+
+//Route Middlewares
+app.use('/api/listItem', listItemRoute)
+
+process.on('unhandledRejection', (reason, p) => {
+    console.log('Unhandled Rejection at: Promise', p, 'reason:', reason, 'stack:', reason.stack);
+});
+
 app.listen(3000, () => console.log(
-`**************************************
+    `**************************************
 * SERVER RUNNING - FREE LIST         *
 **************************************
 `))
