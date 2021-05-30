@@ -1,0 +1,26 @@
+{
+  "name": "freelist-backend",
+  "version": "1.0.0",
+  "description": "Back-end code of the Free List app built in nodejs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EwertonMendes/freelist-backend.git"
+  },
+  "author": "Ewerton Mendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EwertonMendes/freelist-backend/issues"
+  },
+  "homepage": "https://github.com/EwertonMendes/freelist-backend#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
