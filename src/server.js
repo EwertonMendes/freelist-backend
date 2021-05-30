@@ -7,6 +7,8 @@ const methodOverride = require('method-override')
 //Import Routes
 const listItemRoute = require('./routes/listItem')
 
+const PORT = process.env.PORT;
+
 dotenv.config()
 
 //Connect to DB
@@ -40,7 +42,7 @@ process.on('unhandledRejection', (reason, p) => {
     console.log('Unhandled Rejection at: Promise', p, 'reason:', reason, 'stack:', reason.stack);
 });
 
-app.listen(3000, () => console.log(
+app.listen(PORT, () => console.log(
     `**************************************
 * SERVER RUNNING - FREE LIST         *
 **************************************
