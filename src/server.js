@@ -1,9 +1,14 @@
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
+const databaseStart = require('./config/databaseConfig')
 
 dotenv.config()
 
+//Connect to DB
+databaseStart()
+
+//Middlewares
 app.use(express.json())
 
 // Add headers
