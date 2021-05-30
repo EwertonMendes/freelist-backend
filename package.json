@@ -4,7 +4,8 @@
   "description": "Back-end code of the Free List app built in nodejs.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
